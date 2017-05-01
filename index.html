@@ -3,9 +3,10 @@
 <head>
 	<title>Bond Cars</title>
 	<link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
-	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+	<script src="bower_components/angular/angular.min.js"></script>
+	<script src="bower_components/angular-route/angular-route.min.js"></script>
 	<script src="app.js"></script>
+	<script src="controllers/bondController.js"></script>
 </head>
 <body>
 	<div class="container">
@@ -14,6 +15,36 @@
 			<h1>Bonds Cars</h1>
 		</header>
 		
+		<section id="cards" class="container-fluid" ng-controller="BondController as bonds">
+
+		<form ng-submit="bonds.addCar()">
+			<div>
+				<label for="newCar-year">Year:</label>
+				<input type="text" ng-model="bonds.newCar.year">
+			</div>
+			<div>
+				<label for="newCar-make">Make:</label>
+				<input type="text" ng-model="bonds.newCar.make">
+			</div>
+			<div>
+				<label for="newCar-model">Model:</label>
+				<input type="text" ng-model="bonds.newCar.model">
+			</div>
+			<div>
+				<label for="newCar-picture">Picture:</label>
+				<input type="text" ng-model="bonds.newCar.picture">
+			</div>
+			<input type="submit" value="Add Car">
+		</form>
+
+		<div class="row">
+			<div class="col-md-6 col-lg-4" ng-repeat="bond in bonds.all" data-car-id="car._id">
+				
+			</div>
+		</div>
+			
+		</section>
+
 	</div>
 </body>
 </html>
