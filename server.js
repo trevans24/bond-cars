@@ -18,6 +18,8 @@ app.get('/', function home(req,res){
 	res.sendFile(__dirname + '/index.html');
 });
 
+// SHOW ALL ROUTES
+
 // Server
 app.listen(port, ()=>{
 	console.log("Server Running on PORT:3000");
