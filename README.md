@@ -1,4 +1,4 @@
-# bond-cars
+# 007 BOND CARS
 
 # IDEATION
 Since this was going to be a quick app to work under a time crunch, I thought nothing better than a simple designed card based Angular app. This actually became kind of a project 3 model for the card system in particular. The idea to display Bond Cars was actually from my love of 007 movies and in particular the cars he drives.
