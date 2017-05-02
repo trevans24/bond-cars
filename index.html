@@ -9,7 +9,7 @@
 	<script src="controllers/bondController.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Orbitron:400,500,700" rel="stylesheet">
 </head>
-<body>
+<body class="parallax">
 	<div class="container">
 
 		<header class="navbar">
@@ -17,23 +17,22 @@
 		</header>
 		
 		<section class="container-fluid" ng-controller="CarsController as cars">
-		
 		<form ng-submit="cars.addCar()" class="form-horizontal" class="col-md-6">
-			<div>
+			<div class="col-xs-4 col-md-4">
 				<label for="newCar-year">Year:</label>
-				<input type="text" ng-model="cars.newCar.year" class="form-control">
+				<input type="number" ng-model="cars.newCar.year" class="form-control focus"  ng-minlength="4" required>
 			</div>
-			<div>
+			<div class="col-xs-4 col-md-4">
 				<label for="newCar-make">Make:</label>
-				<input type="text" ng-model="cars.newCar.make" class="form-control">
+				<input type="text" ng-model="cars.newCar.make" class="form-control focus" ng-minlength="3" required>
 			</div>
-			<div>
+			<div class="col-xs-4 col-md-4">
 				<label for="newCar-model">Model:</label>
-				<input type="text" ng-model="cars.newCar.model" class="form-control">
+				<input type="text" ng-model="cars.newCar.model" class="form-control focus" ng-minlength="2" required>
 			</div>
-			<div>
+			<div class="col-xs-4 col-md-4">
 				<label for="newCar-picture">Picture:</label>
-				<input type="text" ng-model="cars.newCar.picture" class="form-control">
+				<input type="text" ng-model="cars.newCar.picture" class="form-control focus" required>
 			</div>
 			<input class="btn btn-primary" type="submit" value="Add Car">
 		</form>
