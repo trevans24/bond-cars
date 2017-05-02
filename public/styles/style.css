@@ -30,22 +30,46 @@ h1 {
   background: #231e1e;
   border-color: black;
   color: white;
+  display: inline-block;
   padding: 1rem;
+  margin-bottom: 5px;
+  max-width: 50rem;
   min-height: 16rem;
+  min-width: 40rem;
   position: relative;
 }
 
 .card img {
 	float: left;
+	height: 200px;
+	padding-right: 10px; 
 }
 
-.card .info {
+.card h4 {
+	padding: 20px 10px;
+	font-family: 'Orbitron', sans-serif;
+}
+
+.btn-danger {
 	float: right;
+}
+
+.info {
+	float: left;
 	display: block;
+}
+
+.btn-primary {
+	clear: both;
 }
 
 label {
 	color: white;
+}
+
+.btn {
+	float: right;
+	margin-top: 10px;
 }
 
 .row {
