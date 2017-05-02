@@ -1,15 +1,22 @@
-.navbar {
-	background-color: black;
-	border-bottom: 1px solid black;
+body {
+	background: black;
+}
 
+.navbar {
+	background: url('../images/barrel.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	border-bottom: 1px solid black;
+	height: 150px;
+	padding-top: 40px;
+	width: 100%;
 }
 
 h1 {
-	color: white;
+	color: red;
 	font-family: 'Orbitron', sans-serif;
-	font-size: 80px;
-	font-weight: 700;
-	margin: 0 auto;
+	font-size: 4em;
+	font-weight: 200;
 }
 
 .container-fluid img {
@@ -17,4 +24,31 @@ h1 {
 	height: 200px;
 	margin-top: 10px;
 	width: 200px;
+}
+
+.card {
+  background: #231e1e;
+  border-color: black;
+  color: white;
+  padding: 1rem;
+  min-height: 16rem;
+  position: relative;
+}
+
+.card img {
+	float: left;
+}
+
+.card .info {
+	float: right;
+	display: block;
+}
+
+label {
+	color: white;
+}
+
+.row {
+	clear: both;
+	margin: 0;
 }

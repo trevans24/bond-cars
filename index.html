@@ -17,28 +17,28 @@
 		</header>
 		
 		<section class="container-fluid" ng-controller="CarsController as cars">
-		<img src="images/007-Logo.png">
-		<form ng-submit="cars.addCar()">
+		
+		<form ng-submit="cars.addCar()" class="form-horizontal" class="col-md-6">
 			<div>
 				<label for="newCar-year">Year:</label>
-				<input type="text" ng-model="cars.newCar.year">
+				<input type="text" ng-model="cars.newCar.year" class="form-control">
 			</div>
 			<div>
 				<label for="newCar-make">Make:</label>
-				<input type="text" ng-model="cars.newCar.make">
+				<input type="text" ng-model="cars.newCar.make" class="form-control">
 			</div>
 			<div>
 				<label for="newCar-model">Model:</label>
-				<input type="text" ng-model="cars.newCar.model">
+				<input type="text" ng-model="cars.newCar.model" class="form-control">
 			</div>
 			<div>
 				<label for="newCar-picture">Picture:</label>
-				<input type="text" ng-model="cars.newCar.picture">
+				<input type="text" ng-model="cars.newCar.picture" class="form-control">
 			</div>
-			<input type="submit" value="Add Car">
+			<input class="btn btn-primary" type="submit" value="Add Car">
 		</form>
 		<div class="row">
-			<div class='col-sm-6 col-md-8' ng-repeat="car in cars.all" data-car-id="car._id">
+			<div class='col-sm-8 col-md-10 col-md-offset-2' ng-repeat="car in cars.all" data-car-id="car._id">
 				<bond-car data-car="car" id="{{car._id}}">
 				</bond-car>
 			</div>
