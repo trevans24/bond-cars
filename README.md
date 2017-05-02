@@ -13,8 +13,8 @@ The user if they like all the Bond cars from any movie they would just go to the
 If they are watching a new movie (any movie after Spectre) they could just add a new car and add a link to the car for the picture. It would be in the DB for everyone to see!
 
 # Technology Used
-Mongo/mongoose
-Express
-Angular
-Node
-Bootstrap
+1. Mongo/mongoose
+1. Express
+1. Angular
+1. Node
+1. Bootstrap
