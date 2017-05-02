@@ -7,9 +7,6 @@
 }
 
 .navbar {
-	background: url('../images/barrel.png');
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
 	border-bottom: 1px solid black;
 	height: 150px;
 	padding-top: 40px;
@@ -17,10 +14,11 @@
 }
 
 h1 {
-	color: red;
+	color: white;
 	font-family: 'Orbitron', sans-serif;
 	font-size: 4em;
 	font-weight: 200;
+	opacity: .7;
 }
 
 .card {
@@ -28,11 +26,10 @@ h1 {
   border-color: black;
   color: white;
   display: inline-block;
-  padding: 1rem;
   margin-bottom: 5px;
-  max-width: 50rem;
   min-height: 16rem;
-  min-width: 50rem;
+  opacity: .9;
+  padding: 1rem;
   position: relative;
 }
 
@@ -47,6 +44,7 @@ h1 {
 .card h4 {
 	padding: 20px;
 	font-family: 'Orbitron', sans-serif;
+	opacity: .7;
 }
 
 .btn-danger {
@@ -65,6 +63,11 @@ form .btn-primary {
 
 label {
 	color: white;
+	opacity: .7;
+}
+
+input {
+	opacity: .7;
 }
 
 .btn {
