@@ -21,6 +21,10 @@ h1 {
 	opacity: .7;
 }
 
+.new {
+	margin-left: 40px;
+}
+
 .card {
   background: #231e1e;
   border-color: black;
@@ -63,6 +67,8 @@ form .btn-primary {
 
 label {
 	color: white;
+	font-family: 'Orbitron', sans-serif;
+	margin-top: 7px;
 	opacity: .7;
 }
 

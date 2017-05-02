@@ -3,8 +3,6 @@
 angular.module('bondApp', ['ngRoute'])
 	.controller('CarsController', CarsController)
 	.directive('bondCar', bondCar);
-	// .config(carRoute)
-	// .factory('Cars', Cars);
 
 // injection for BondController
 CarsController.$inject = ['$http'];
@@ -16,6 +14,13 @@ function CarsController($http){
 	vm.newCar = {};
 	vm.addCar = addCar;
 	vm.deleteCar = deleteCar;
+	vm.formDrop = formDrop;
+	vm.newForm = false;
+
+	// Form Drop Function
+	function formDrop(){
+		vm.newForm =!vm.newForm;
+	}
 
 	// GET
 	function getCars(){
@@ -65,23 +70,3 @@ function bondCar(){
 	};
 	return directive;
 }
-
-// ROUTING
-// carRoute.$inject = ['$routeProvider'];
-
-// function carRoute($routeProvider){
-// 	$routeProvider
-// 	.when('/', {
-// 		templateUrl: 'templates/carDirective.html'
-// 	});
-// }
-
-// Factory
-// Cars.$inject = ['$http'];
-
-// function Cars($http){
-// 	let carMethods = {};
-// 	carMethods.getAllCars = function(){
-// 		return $http.get('/cars');
-// 	};
-// }

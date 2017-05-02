@@ -17,25 +17,23 @@
 		</header>
 		
 		<section class="container-fluid" ng-controller="CarsController as cars">
-		<form ng-submit="cars.addCar()" class="form-horizontal col-xs-12 col-md-6 col-lg-4" name="newForm">
-			<div>
-				<label for="newCar-year">Year:</label>
-				<input type="number" id="new-car-year" ng-model="cars.newCar.year" placeholder="2017" class="form-control focus" ng-minlength=4 ng-maxlength=30 required>
-			</div>
-			<div>
-				<label for="newCar-make">Make:</label>
-				<input type="text" id="new-car-make" ng-model="cars.newCar.make" placeholder="Aston Martin" class="form-control focus" ng-class="{'error': cars.newCar.make.length <= 4}" required>
-			</div>
-			<div>
-				<label for="newCar-model">Model:</label>
-				<input type="text" id="new-car-model" ng-model="cars.newCar.model" placeholder="DB12" class="form-control focus" ng-minlength=2 ng-maxlength=30 required>
-			</div>
-			<div>
-				<label for="newCar-picture">Picture:</label>
-				<input type="text" ng-model="cars.newCar.picture" placeholder="google.com" class="form-control focus" required>
-			</div>
-			<input class="btn btn-primary" type="submit" value="Add Car" ng-disabled="newForm.carYame.$invalid || newForm.carMake.$invalid || newForm.carModel.$invalid">
+
+		<input class='new' type="checkbox" ng-model="checked" ng-click="cars.formDrop()">
+			<label>Add a Car</label>
+		</input>
+
+		<form ng-show="cars.newForm" ng-submit="cars.addCar()" class="form-horizontal col-xs-12 col-md-6 col-lg-4" name="newForm">
+			<label for="newCar-year">Year:</label>
+			<input type="number" id="new-car-year" ng-model="cars.newCar.year" placeholder="2017" class="form-control focus" ng-maxlength=15 ng-minlength=4 required>
+			<label for="newCar-make">Make:</label>
+			<input type="text" id="new-car-make" ng-model="cars.newCar.make" placeholder="Aston Martin" class="form-control focus" ng-maxlength=15 ng-minlength=3 required>
+			<label for="newCar-model">Model:</label>
+			<input type="text" id="new-car-model" ng-model="cars.newCar.model" placeholder="DB12" class="form-control focus" ng-maxlength=15 ng-minlength=2 required>
+			<label for="newCar-picture">Picture:</label>
+			<input type="text" ng-model="cars.newCar.picture" placeholder="google.com" class="form-control focus" required>
+			<input class="btn btn-primary" type="submit" value="Add Car" ng-disabled="newForm.carYear.$invalid || newForm.carMake.$invalid || newForm.carModel.$invalid">
 		</form>
+
 		<div class="row">
 			<div class='col-sm-8 col-md-12' ng-repeat="car in cars.all" data-car-id="car._id">
 				<bond-car data-car="car" id="{{car._id}}">
