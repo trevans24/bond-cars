@@ -64,7 +64,7 @@ app.delete('/cars/:id', (req,res)=>{
 		if(err){
 			console.log("Delete Error: ", err);
 		}
-		res.json(deletedCar);
+		res.json({message: "Deleted Car"});
 	});
 });
 

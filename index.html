@@ -36,8 +36,8 @@
 			<input type="submit" value="Add Car">
 		</form>
 		<div class="row">
-			<div class='col-sm-6 col-md-8' ng-repeat="car in cars.cars" data-car-id="car._id">
-				<bond-car id="{{car._id}}" data-car="car">
+			<div class='col-sm-6 col-md-8' ng-repeat="car in cars.all" data-car-id="car._id">
+				<bond-car data-car="car" id="{{car._id}}">
 				</bond-car>
 			</div>
 		</div>

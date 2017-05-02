@@ -12,23 +12,26 @@ CarsController.$inject = ['$http'];
 // Controller
 function CarsController($http){
 	let vm = this;
-	vm.cars = [];
+	vm.all = [];
 	vm.newCar = {};
 	vm.addCar = addCar;
+	vm.deleteCar = deleteCar;
 
 	// GET
 	function getCars(){
 		$http.get('/cars')
 		.then((res)=>{
 			console.log(res.data);
-			vm.cars = res.data;
+			vm.all = res.data;
 			// console.log(vm.all);
 		});
 	}
 
+	getCars();
+
 	// POST
 	function addCar(){
-		vm.cars.push(vm.newCar);
+		vm.all.push(vm.newCar);
 		$http.post('/cars', vm.newCar)
 		.then((res)=>{
 			console.log(res);
@@ -40,15 +43,13 @@ function CarsController($http){
 	function deleteCar(id){
 		console.log("Delete Clicked");
 		console.log(id);
-		// $http.delete('/cars/' + id)
-		// .then((res)=>{
-		// 	let index = vm.all.indexOf(id);
-		// 	vm.all.splice(index,1);
-		// });
+		$http.delete('/cars/' + id)
+		.then((res)=>{
+			let index = vm.all.indexOf(id);
+			vm.all.splice(index,1);
+		});
 	}
 
-
-	getCars();
 }
 
 // directive
