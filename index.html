@@ -5,7 +5,6 @@
 	<link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
 	<script src="bower_components/angular/angular.min.js"></script>
 	<script src="bower_components/angular-route/angular-route.min.js"></script>
-	<script src="app.js"></script>
 	<script src="controllers/bondController.js"></script>
 </head>
 <body>
@@ -37,7 +36,7 @@
 			<input type="submit" value="Add Car">
 		</form>
 		<div class="row">
-			<div class='col-sm-6 col-md-10' ng-repeat="car in cars.all" data-car-id="{{car._id}}">
+			<div class='col-sm-6 col-md-8' ng-repeat="car in cars.cars" data-car-id="car._id">
 				<bond-car id="{{car._id}}" data-car="car">
 				</bond-car>
 			</div>
