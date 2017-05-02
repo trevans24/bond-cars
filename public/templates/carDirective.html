@@ -1,9 +1,11 @@
 <section>
 		<div class="card" ng-controller="CarsController as cars">
-			<h4>{{car.year}}</h4>
-			<h4>{{car.make}}</h4>
-			<h4>{{car.model}}</h4>
-			<img ng-src="{{car.picture}}">
+		<img ng-src="{{car.picture}}">
+			<div class="info">
+				<h4>Year: {{car.year}}</h4>
+				<h4>Make: {{car.make}}</h4>
+				<h4>Model: {{car.model}}</h4>
+			</div>
 			<button class="delete" ng-click="cars.deleteCar(id)">Delete</button>
 		</div>
 </section>

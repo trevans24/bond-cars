@@ -3,19 +3,21 @@
 <head>
 	<title>Bond Cars</title>
 	<link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="styles/style.css">
 	<script src="bower_components/angular/angular.min.js"></script>
 	<script src="bower_components/angular-route/angular-route.min.js"></script>
 	<script src="controllers/bondController.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Orbitron:400,500,700" rel="stylesheet">
 </head>
 <body>
 	<div class="container">
 
 		<header class="navbar">
-			<h1>Bonds Cars</h1>
+			<h1>BOND CARS</h1>
 		</header>
 		
-		<section id="cards" class="container-fluid" ng-controller="CarsController as cars">
-
+		<section class="container-fluid" ng-controller="CarsController as cars">
+		<img src="images/007-Logo.png">
 		<form ng-submit="cars.addCar()">
 			<div>
 				<label for="newCar-year">Year:</label>

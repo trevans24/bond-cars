@@ -1,0 +1,20 @@
+.navbar {
+	background-color: black;
+	border-bottom: 1px solid black;
+
+}
+
+h1 {
+	color: white;
+	font-family: 'Orbitron', sans-serif;
+	font-size: 80px;
+	font-weight: 700;
+	margin: 0 auto;
+}
+
+.container-fluid img {
+	float: left;
+	height: 200px;
+	margin-top: 10px;
+	width: 200px;
+}
