@@ -21,6 +21,8 @@
 		<input class='new' type="checkbox" ng-model="checked" ng-click="cars.formDrop()">
 			<label>Add a Car</label>
 		</input>
+	
+		<input class="search" type="text" ng-model="search" placeholder="Search Here">
 
 		<form ng-show="cars.newForm" ng-submit="cars.addCar()" class="form-horizontal col-xs-12 col-md-6 col-lg-4" name="newForm">
 			<label for="newCar-year">Year:</label>
@@ -35,7 +37,7 @@
 		</form>
 
 		<div class="row">
-			<div class='col-sm-8 col-md-12' ng-repeat="car in cars.all" data-car-id="car._id">
+			<div class='col-sm-8 col-md-12' data-car-id="car._id" ng-repeat="car in cars.all | filter:search">
 				<bond-car data-car="car" id="{{car._id}}">
 				</bond-car>
 			</div>

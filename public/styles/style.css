@@ -25,23 +25,28 @@ h1 {
 	margin-left: 40px;
 }
 
+.search {
+	float: right;
+	margin: 10px 15px;
+}
+
 .card {
-  background: #231e1e;
-  border-color: black;
-  color: white;
-  display: inline-block;
-  margin-bottom: 5px;
-  min-height: 16rem;
-  opacity: .9;
-  padding: 1rem;
-  position: relative;
+	background: #231e1e;
+	border-color: black;
+	color: white;
+	display: inline-block;
+	margin-bottom: 5px;
+	min-height: 16rem;
+	opacity: .9;
+	padding: 1rem;
+	position: relative;
 }
 
 .card img {
 	float: left;
 	height: 200px;
 	margin-top: 10px;
-	padding-right: 10px;
+	padding-right: 5px;
 	width: 250px;
 }
 

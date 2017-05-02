@@ -60,11 +60,11 @@ app.post('/cars', (req,res)=>{
 
 // DELETE
 app.delete('/cars/:id', (req,res)=>{
-	db.Car.findOneAndRemove({_id: req.params.id}, (err,deletedCar)=>{
+	db.Car.remove({_id: req.params.id}, (err,deletedCar)=>{
 		if(err){
 			console.log("Delete Error: ", err);
 		}
-		res.json({message: "Deleted Car"});
+		res.json("yoooo");
 	});
 });
 

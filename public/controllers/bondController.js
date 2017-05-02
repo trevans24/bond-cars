@@ -1,6 +1,6 @@
 'use strict'
 // set up angular
-angular.module('bondApp', ['ngRoute'])
+angular.module('bondApp', [])
 	.controller('CarsController', CarsController)
 	.directive('bondCar', bondCar);
 
@@ -13,6 +13,7 @@ function CarsController($http){
 	vm.all = [];
 	vm.newCar = {};
 	vm.addCar = addCar;
+	vm.getCars = getCars;
 	vm.deleteCar = deleteCar;
 	vm.formDrop = formDrop;
 	vm.newForm = false;
@@ -45,13 +46,12 @@ function CarsController($http){
 	}
 	
 	// DELETE
-	function deleteCar(id){
+	function deleteCar(car){
 		console.log("Delete Clicked");
-		console.log(id);
-		$http.delete('/cars/' + id)
+		console.log(car._id);
+		$http.delete('/cars/' + car._id)
 		.then((res)=>{
-			let index = vm.all.indexOf(id);
-			vm.all.splice(index,1);
+			vm.getCars();
 		});
 	}
 
