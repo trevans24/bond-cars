@@ -6,4 +6,4 @@ Since this was going to be a quick app to work under a time crunch, I thought no
 # Design
 Actually my design came from no where in particular. I actually just wanted to style the site similar to an Aston Martin simple, eloquent, and yet you know it is designed for speed.
 
-![Aston Martin Vanquish](vanquish.jpg)
+![Aston Martin Vanquish](public/images/vanquish.jpg)
