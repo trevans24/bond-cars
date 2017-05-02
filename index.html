@@ -15,34 +15,34 @@
 			<h1>Bonds Cars</h1>
 		</header>
 		
-		<section id="cards" class="container-fluid" ng-controller="BondController as bonds">
+		<section id="cards" class="container-fluid" ng-controller="CarsController as cars">
 
-		<form ng-submit="bonds.addCar()">
+		<form ng-submit="cars.addCar()">
 			<div>
 				<label for="newCar-year">Year:</label>
-				<input type="text" ng-model="bonds.newCar.year">
+				<input type="text" ng-model="cars.newCar.year">
 			</div>
 			<div>
 				<label for="newCar-make">Make:</label>
-				<input type="text" ng-model="bonds.newCar.make">
+				<input type="text" ng-model="cars.newCar.make">
 			</div>
 			<div>
 				<label for="newCar-model">Model:</label>
-				<input type="text" ng-model="bonds.newCar.model">
+				<input type="text" ng-model="cars.newCar.model">
 			</div>
 			<div>
 				<label for="newCar-picture">Picture:</label>
-				<input type="text" ng-model="bonds.newCar.picture">
+				<input type="text" ng-model="cars.newCar.picture">
 			</div>
 			<input type="submit" value="Add Car">
 		</form>
-
 		<div class="row">
-			<div class="col-md-6 col-lg-4" ng-repeat="bond in bonds.all" data-car-id="car._id">
-				
+			<div class='col-sm-6 col-md-10' ng-repeat="car in cars.all" data-car-id="{{car._id}}">
+				<bond-car id="{{car._id}}" data-car="car">
+				</bond-car>
 			</div>
 		</div>
-			
+
 		</section>
 
 	</div>
