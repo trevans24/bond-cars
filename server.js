@@ -4,7 +4,7 @@ const express = require('express');
 const app = express();
 const router = express.Router();
 const bodyParser = require('body-parser');
-const port = process.env.PORT || 3000;
+// const port = process.env.PORT || 3000;
 
 // body parser for use on response
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -91,6 +91,6 @@ app.put('/cars/:id', (req,res)=>{
 
 
 // Server
-app.listen(port, ()=>{
+app.listen(process.env.PORT || 3000, ()=>{
 	console.log("Server Running on PORT:3000");
 });

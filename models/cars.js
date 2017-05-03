@@ -6,7 +6,8 @@ let CarSchema = new Schema ({
 	year: Number,
 	make: String,
 	model: String,
-	picture: String
+	picture: String,
+	movie: String
 });
 
 // Car Model
